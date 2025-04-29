@@ -1,0 +1,448 @@
+<!DOCTYPE html><html lang="en" data-bs-theme="light"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover traditional Kurdish crafts, textiles and artisanal works">
+    <meta name="keywords" content="Kurdistan, Kurdish crafts, textiles, carpets, jewelry, pottery">
+    <title>Crafts - Kurdistan Cultural Heritage</title>
+    
+    <link rel="icon" href="assets/icons/icon.png" type="image/png">
+    
+    <link href="./styles/bootstrap/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./styles/bootstrap/bootstrap-icons.css">
+    
+    <link href="./styles/aos/aos.css" rel="stylesheet">
+    
+    <link href="./styles/google/font/Poppins.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/style.css">
+    
+    <link rel="stylesheet" href="styles/toggle.css">
+    
+    
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/icons/icon.png" alt="Kurdistan Heritage" height="60" class="me-2">Kurdistan Heritage
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="history.html">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="music.html">Music</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="crafts.html">Crafts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="language.html">Language</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="recipes.html">Recipes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-2">
+                        <div class="form-check form-switch" id="themeToggleWrapper">
+                            <input class="form-check-input" type="checkbox" id="themeToggle" role="switch">
+                            <label class="form-check-label" for="themeToggle">
+                                <i class="bi bi-sun-fill"></i>
+                                <i class="bi bi-moon-stars-fill"></i>
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+    <header class="container-fluid py-5 mb-5 page-header">
+        <div class="container text-center">
+            <h1 class="display-3 fw-bold" style="color: #000 !important;">Kurdish Crafts</h1>
+            <p class="lead fs-4 mb-4" style="color: #000 !important;">Discover the intricate artistry and traditional craftsmanship </p>
+        </div>
+    </header>
+
+    
+    <div class="container mb-4">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Crafts</li>
+            </ol>
+        </nav>
+    </div>
+
+    
+    <div class="toast-container position-fixed top-0 end-0 p-3">
+        <div id="favoriteToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header bg-theme-primary text-fixed-light">
+                <i class="bi bi-heart-fill me-2"></i>
+                <strong class="me-auto">Favorite Added</strong>
+                <small>Just now</small>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                This item has been added to your favorites!
+            </div>
+        </div>
+        <div id="infoToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header bg-theme-accent text-fixed-dark">
+                <i class="bi bi-info-circle-fill me-2"></i>
+                <strong class="me-auto text-fixed-dark">More Information</strong>
+                <small class="text-fixed-dark">Just now</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Click on any image to see more details about the craft.
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="container my-5">
+        <div class="row">
+            
+            <div class="col-lg-3 d-none d-lg-block">
+                <nav id="crafts-nav" class="scrollspy-nav">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#overview">Kurdish Crafts Overview</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#artisan-traditions">Kurdish Artisan Traditions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#textiles">Textiles &amp; Carpets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#jewelry">Jewelry &amp; Metalwork</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#pottery">Pottery &amp; Ceramics</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#workshops">Artisan Workshops</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            
+            
+            <div class="col-lg-9" data-bs-spy="scroll" data-bs-target="#crafts-nav" data-bs-smooth-scroll="true" tabindex="0">
+                
+                <section id="overview" class="mb-5">
+                    <div class="d-flex align-items-center mb-4">
+                        <h2 class="theme-primary mb-0">Kurdish Crafts Overview</h2>
+                        <span class="badge bg-theme-primary text-light ms-3">Cultural Expression</span>
+                    </div>
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <p class="card-text">Explore the rich diversity of Kurdish craftsmanship, from ancient textile traditions to masterful metalworking. Each craft represents centuries of cultural knowledge and artistic expression.</p>
+                            <p class="card-text">Browse through the different categories below to discover the unique characteristics and cultural significance of each Kurdish craft tradition.</p>
+                        </div>
+                    </div>
+                </section>
+
+                
+                <section id="artisan-traditions" class="mb-5">
+                    <div class="d-flex align-items-center mb-4">
+                        <h2 class="theme-primary mb-0">Kurdish Artisan Traditions</h2>
+                        <span class="badge bg-theme-primary text-light ms-3">Cultural Heritage</span>
+                    </div>
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <p class="card-text">Kurdish crafts reflect centuries of cultural heritage and artistic excellence. From intricately woven carpets to detailed metalwork, Kurdish craftspeople have developed distinctive styles that are recognized worldwide for their quality and beauty.</p>
+                            <p class="card-text">Traditional Kurdish crafts are not only decorative arts but also tell stories of the region's history, values, and daily life. Many of these crafts have been passed down through generations, preserving ancient techniques while adapting to contemporary tastes.</p>
+                            
+                            
+                            <h4 class="theme-secondary mb-3">Crafts Quick Facts</h4>
+                            <div class="row g-4 mb-4">
+                                <div class="col-md-4">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <div class="card-body text-center d-flex flex-column">
+                                            <h6 class="mb-3">Centuries Old</h6>
+                                            <div class="theme-primary fs-4 fw-bold mt-auto">5+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <div class="card-body text-center d-flex flex-column">
+                                            <h6 class="mb-3">Craft Categories</h6>
+                                            <div class="theme-primary fs-4 fw-bold mt-auto">8+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <div class="card-body text-center d-flex flex-column">
+                                            <h6 class="mb-3">Active Artisans</h6>
+                                            <div class="theme-primary fs-4 fw-bold mt-auto">5K+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex flex-wrap gap-2 mt-4">
+                                <button type="button" class="btn btn-outline-theme-primary">
+                                    <i class="bi bi-info-circle me-2"></i> About Kurdish Crafts
+                                </button>
+                                <button type="button" class="btn btn-outline-theme-secondary">
+                                    <i class="bi bi-clock-history me-2"></i> Craft Traditions
+                                </button>
+                                <button type="button" class="btn btn-outline-theme-primary">
+                                    <i class="bi bi-tools me-2"></i> Crafting Methods
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                
+                <section id="textiles" class="mb-5">
+                    <div class="d-flex align-items-center mb-4">
+                        <h2 class="theme-primary mb-0">Textiles &amp; Carpets</h2>
+                        <span class="badge bg-theme-primary text-light ms-3">Heritage Art</span>
+                    </div>
+
+                    <div class="accordion shadow-sm" id="textilesAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRugs" aria-expanded="true" aria-controls="collapseRugs">
+                                    Kurdish Rugs &amp; Carpets
+                                </button>
+                            </h2>
+                            <div id="collapseRugs" class="accordion-collapse collapse show" data-bs-parent="#textilesAccordion">
+                                <div class="accordion-body">
+                                    <p>Kurdish carpets are renowned for their vibrant colors, intricate geometric patterns, and exceptional craftsmanship. Often created on portable looms by nomadic women, these carpets feature distinctive motifs that vary by region and tribe.</p>
+                                    <div class="progress mt-3">
+                                        <div class="progress-bar bg-theme-primary progress-bar-striped" role="progressbar" aria-label="Cultural significance" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%">Cultural Significance: 95%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseKilims" aria-expanded="false" aria-controls="collapseKilims">
+                                    Kilims &amp; Flatweaves
+                                </button>
+                            </h2>
+                            <div id="collapseKilims" class="accordion-collapse collapse" data-bs-parent="#textilesAccordion">
+                                <div class="accordion-body">
+                                    <p>Kilims are flat-woven textiles without pile, known for their bold colors and geometric designs. Kurdish kilims typically feature diamonds, stars, and stylized natural motifs that tell stories of tribal heritage and daily life.</p>
+                                    <div class="progress mt-3">
+                                        <div class="progress-bar progress-bar-striped" role="progressbar" aria-label="Cultural significance" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">Cultural Significance: 90%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTraditionalGarments" aria-expanded="false" aria-controls="collapseTraditionalGarments">
+                                    Traditional Garments
+                                </button>
+                            </h2>
+                            <div id="collapseTraditionalGarments" class="accordion-collapse collapse" data-bs-parent="#textilesAccordion">
+                                <div class="accordion-body">
+                                    <p>Traditional Kurdish clothing includes vibrant dresses, vests, and headwear adorned with intricate embroidery and decorative elements. These garments vary by region, reflecting local styles and environmental adaptations.</p>
+                                    <div class="progress mt-3">
+                                        <div class="progress-bar progress-bar-striped" role="progressbar" aria-label="Cultural significance" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%">Cultural Significance: 85%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                
+                <section id="jewelry" class="mb-5">
+                    <div class="d-flex align-items-center mb-4">
+                        <h2 class="theme-primary mb-0">Jewelry &amp; Metalwork</h2>
+                        <span class="badge bg-theme-primary text-light ms-3">Artisan Craft</span>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <img src="./assets/images/kurd_23.jpg" class="card-img-top" alt="Silver Jewelry" style="height: 300px; object-fit: cover;">
+                                <div class="card-body d-flex flex-column">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <h3 class="card-title theme-secondary mb-0">Silver Jewelry</h3>
+                                        <span class="badge bg-theme-accent text-dark">Heritage</span>
+                                    </div>
+                                    <p class="card-text">Kurdish silversmiths create elaborate necklaces, bracelets, and headpieces that are worn for special occasions and as symbols of wealth and status. Traditional techniques include filigree, granulation, and stone setting.</p>
+                                    <div class="d-flex justify-content-between align-items-center mt-auto pt-4">
+                                        <button type="button" class="btn btn-sm btn-outline-theme-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Found across all Kurdish regions">
+                                            <i class="bi bi-geo-alt-fill"></i> Regions
+                                        </button>
+                                        <button type="button" class="btn btn-sm btn-outline-theme-secondary" data-bs-toggle="popover" title="Cultural Significance" data-bs-content="Silver jewelry often serves as a family heirloom, passed down through generations as portable wealth.">
+                                            <i class="bi bi-info-circle"></i> More Info
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <img src="./assets/images/kurd_24.jpeg" class="card-img-top" alt="Copper Work" style="height: 300px; object-fit: cover;">
+                                <div class="card-body d-flex flex-column">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <h3 class="card-title theme-secondary mb-0">Copper Work</h3>
+                                        <span class="badge bg-theme-secondary text-light">Functional Art</span>
+                                    </div>
+                                    <p class="card-text">Kurdish coppersmiths create both decorative and functional items, from elaborately engraved trays to cooking vessels. Traditional techniques include hammering, embossing, and engraving.</p>
+                                    <div class="d-flex justify-content-between align-items-center mt-auto pt-4">
+                                        <button type="button" class="btn btn-sm btn-outline-theme-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Particularly strong tradition in Diyarbakir and Sulaymaniyah">
+                                            <i class="bi bi-geo-alt-fill"></i> Regions
+                                        </button>
+                                        <button type="button" class="btn btn-sm btn-outline-theme-secondary" data-bs-toggle="popover" title="Historical Significance" data-bs-content="Copper work has been practiced in Kurdish regions for over a millennium, with designs reflecting various cultural influences.">
+                                            <i class="bi bi-info-circle"></i> More Info
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                
+                <section id="pottery" class="mb-5">
+                    <div class="d-flex align-items-center mb-4">
+                        <h2 class="theme-primary mb-0">Pottery &amp; Ceramics</h2>
+                        <span class="badge bg-theme-primary text-light ms-3">Traditional Craft</span>
+                    </div>
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="ratio ratio-16x9 mb-3 shadow-sm">
+                                <img src="/assets/images/kurd_25.jpg" alt="Pottery & Ceramics" >
+                            </div>
+                            <h4 class="theme-secondary mb-3">Ancient Artform</h4>
+                            <p class="card-text">Kurdish pottery is characterized by its earthy tones and functional designs. From water jugs to cooking vessels, these ceramic creations reflect the practical needs of traditional Kurdish households while incorporating decorative elements.</p>
+                        </div>
+                    </div>
+                </section>
+
+                
+                <section id="workshops" class="mb-5">
+                    <div class="d-flex align-items-center mb-4">
+                        <h2 class="theme-primary mb-0">Artisan Workshops</h2>
+                        <span class="badge bg-theme-primary text-light ms-3">Learning Centers</span>
+                    </div>
+                    <div class="list-group shadow-sm">
+                        <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                            <div class="d-flex w-100 justify-content-between align-items-center">
+                                <div>
+                                    <h5 class="mb-1 theme-secondary">Sulaymaniyah Textile Center</h5>
+                                    <p class="mb-1">A cooperative of women weavers preserving traditional carpet-making techniques while creating economic opportunities.</p>
+                                </div>
+                                <span class="badge bg-theme-primary text-light d-none d-md-flex"><i class="bi bi-geo-alt me-1"></i>Sulaymaniyah</span>
+                            </div>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between align-items-center">
+                                <div>
+                                    <h5 class="mb-1 theme-secondary">Duhok Silversmith Guild</h5>
+                                    <p class="mb-1">Master silversmiths teaching traditional jewelry-making techniques to new generations of artisans.</p>
+                                </div>
+                                <span class="badge bg-theme-primary text-light d-none d-md-flex"><i class="bi bi-geo-alt me-1"></i>Duhok</span>
+                            </div>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between align-items-center">
+                                <div>
+                                    <h5 class="mb-1 theme-secondary">Erbil Pottery Workshop</h5>
+                                    <p class="mb-1">Ceramic artists working with traditional methods while incorporating contemporary designs for global markets.</p>
+                                </div>
+                                <span class="badge bg-theme-primary text-light d-none d-md-flex"><i class="bi bi-geo-alt me-1"></i>Erbil</span>
+                            </div>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between align-items-center">
+                                <div>
+                                    <h5 class="mb-1 theme-secondary">Mardin Copper Bazaar</h5>
+                                    <p class="mb-1">A historic marketplace where copper artisans display their craftsmanship in traditional metalworking techniques.</p>
+                                </div>
+                                <span class="badge bg-theme-primary text-light d-none d-md-flex"><i class="bi bi-geo-alt me-1"></i>Mardin</span>
+                            </div>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between align-items-center">
+                                <div>
+                                    <h5 class="mb-1 theme-secondary">Halabja Embroidery Collective</h5>
+                                    <p class="mb-1">Women artisans specializing in intricate embroidery for traditional garments and modern home décor items.</p>
+                                </div>
+                                <span class="badge bg-theme-primary text-light d-none d-md-flex"><i class="bi bi-geo-alt me-1"></i>Halabja</span>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    
+    <footer>
+        <svg class="footer-wave" viewBox="0 0 1440 320" preserveAspectRatio="none" style="filter: none; box-shadow: none;">
+            <path fill="#00855D" fill-opacity="1" d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,90.7C672,85,768,107,864,133.3C960,160,1056,192,1152,186.7C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+        <div class="footer-content">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-4 col-lg-3 col-xl-3">
+                        <h5>Kurdistan Cultural Heritage</h5>
+                        <p>Celebrating and preserving the rich cultural heritage of Kurdistan.</p>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3">
+                        <h5>Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="history.html">History</a></li>
+                            <li><a href="music.html">Music</a></li>
+                            <li><a href="crafts.html">Crafts</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3">
+                        <h5>More</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="language.html">Language</a></li>
+                            <li><a href="recipes.html">Recipes</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <div class="text-center">
+                    <p class="copyright-text">© 2025 Kurdistan Cultural Heritage. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    
+    <button type="button" class="btn-back-to-top" id="backToTop">
+        <i class="bi bi-arrow-up-short"></i>
+    </button>
+
+    
+    <script src="scripts/bootstrap/bootstrap.bundle.min.js"></script>
+    
+    <script src="scripts/aos/aos.js"></script>
+    
+    <script src="scripts/main.js"></script>
+    <script src="scripts/animated-dots.js"></script>
+
+ 
+</body></html>

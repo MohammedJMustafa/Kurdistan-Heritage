@@ -1,0 +1,596 @@
+<!DOCTYPE html><html lang="en" data-bs-theme="light"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover traditional Kurdish recipes and cuisine">
+    <meta name="keywords" content="Kurdistan, Kurdish food, recipes, traditional cuisine, dolma, biryani">
+    <title>Recipes - Kurdistan Cultural Heritage</title>
+    
+    <link rel="icon" href="assets/icons/icon.png" type="image/png">
+    
+    <link href="./styles/bootstrap/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./styles/bootstrap/bootstrap-icons.css">
+    
+    <link href="./styles/aos/aos.css" rel="stylesheet">
+    
+    <link href="./styles/google/font/Poppins.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/style.css">
+    
+    <link rel="stylesheet" href="styles/toggle.css">
+    
+    
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/icons/icon.png" alt="Kurdistan Heritage" height="60" class="me-2">Kurdistan Heritage
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="history.html">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="music.html">Music</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="crafts.html">Crafts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="language.html">Language</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="recipes.html">Recipes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-2">
+                        <div class="form-check form-switch" id="themeToggleWrapper">
+                            <input class="form-check-input" type="checkbox" id="themeToggle" role="switch">
+                            <label class="form-check-label" for="themeToggle">
+                                <i class="bi bi-sun-fill"></i>
+                                <i class="bi bi-moon-stars-fill"></i>
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+    <header class="container-fluid py-5 mb-5 page-header">
+        <div class="container text-center">
+            <h1 class="display-3 fw-bold" style="color: #000 !important;">Kurdish Cuisine</h1>
+            <p class="lead fs-4 mb-4" style="color: #000 !important;">Discover the delicious flavors and traditional recipes of Kurdistan</p>
+        </div>
+    </header>
+
+    
+    <div class="container mb-4">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Recipes</li>
+            </ol>
+        </nav>
+    </div>
+
+    
+    <div class="container my-5">
+        <div class="row">
+            
+            <div class="col-lg-3 d-none d-lg-block">
+                <nav id="recipes-nav" class="scrollspy-nav">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#introduction">Kurdish Cuisine</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#filters">Recipe Filters</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#timer">Cooking Timer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#recipes">Traditional Recipes</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            
+            <div class="col-lg-9" data-bs-spy="scroll" data-bs-target="#recipes-nav" data-bs-smooth-scroll="true" tabindex="0">
+                
+                <section id="introduction" class="mb-5">
+                    <div class="d-flex align-items-center mb-4">
+                        <h2 class="theme-primary mb-0">Kurdish Cuisine</h2>
+                        <span class="badge badge-primary ms-3">Traditional</span>
+                    </div>
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <p class="card-text">Kurdish cuisine represents a rich tapestry of flavors influenced by the diverse geography of Kurdistan, spanning mountainous regions, fertile valleys, and riverlands. The cuisine features fresh ingredients, aromatic spices, and cooking techniques passed down through generations.</p>
+                            <p class="card-text mb-0">From hearty meat dishes to delicate pastries, Kurdish food captures the essence of hospitality and community that are central to Kurdish culture. Many dishes are prepared for specific celebrations and holidays, making food an integral part of cultural identity.</p>
+                        </div>
+                    </div>
+                </section>
+
+                
+                <section id="filters" class="mb-5">
+                    <div class="d-flex align-items-center mb-4">
+                        <h2 class="theme-primary mb-0">Recipe Filters</h2>
+                        <span class="badge badge-secondary ms-3">Find Dishes</span>
+                    </div>
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="filter-container">
+                                
+                                <div class="filter-section mb-4">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <i class="bi bi-tags fs-4 me-2 theme-primary"></i>
+                                        <h4 class="mb-0">Filter by Category</h4>
+                                    </div>
+                                    <div class="btn-group-filter">
+                                        <button type="button" class="btn filter-btn category-btn active" data-filter="all">ALL</button>
+                                        <button type="button" class="btn filter-btn category-btn" data-filter="Main">MAIN DISH</button>
+                                        <button type="button" class="btn filter-btn category-btn" data-filter="Bread">BREAD</button>
+                                        <button type="button" class="btn filter-btn category-btn" data-filter="Dessert">DESSERT</button>
+                                        <button type="button" class="btn filter-btn category-btn" data-filter="Appetizer">APPETIZER</button>
+                                        <button type="button" class="btn filter-btn category-btn" data-filter="Beverage">BEVERAGE</button>
+                                    </div>
+                                </div>
+                                
+                                
+                                <div class="filter-section">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <i class="bi bi-clock-history fs-4 me-2 theme-secondary"></i>
+                                        <h4 class="mb-0">Filter by Time</h4>
+                                    </div>
+                                    <div class="btn-group-filter">
+                                        <button type="button" class="btn filter-btn time-btn active" data-time="all">ALL</button>
+                                        <button type="button" class="btn filter-btn time-btn" data-time="30">QUICK (≤30 MIN)</button>
+                                        <button type="button" class="btn filter-btn time-btn" data-time="60">MEDIUM (≤1 HR)</button>
+                                        <button type="button" class="btn filter-btn time-btn" data-time="61">LONG (&gt;1 HR)</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                
+                <section id="timer" class="mb-5">
+                    <div class="d-flex align-items-center mb-4">
+                        <h2 class="theme-primary mb-0">Cooking Timer</h2>
+                        <span class="badge badge-accent ms-3">Helpful Tool</span>
+                    </div>
+                    <div class="card border-0 shadow-sm timer-card">
+                        <div class="card-body p-4">
+                            <div class="row align-items-center">
+                                <div class="col-md-6 text-center">
+                                    <i class="bi bi-alarm-fill timer-icon"></i>
+                                    <h4 class="timer-title mb-3">Set Your Timer</h4>
+                                    <p>Perfect timing for your Kurdish recipes!</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="minutes" class="form-label">Minutes:</label>
+                                        <input type="number" class="form-control timer-input" id="minutes" min="0" max="180" value="10">
+                                    </div>
+                                    <div class="progress mb-3">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%" id="timerProgress"></div>
+                                    </div>
+                                    <div class="text-center mb-3">
+                                        <div class="timer-display">10:00</div>
+                                    </div>
+                                    <div class="d-flex justify-content-center">
+                                        <button class="btn btn-theme-primary me-2" id="controlTimer">
+                                            <i class="bi bi-play-fill me-2"></i> Start
+                                        </button>
+                                        <button class="btn btn-theme-secondary" id="resetTimer">
+                                            <i class="bi bi-arrow-counterclockwise me-2"></i> Reset
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                
+                <section id="recipes" class="mb-5">
+                    <div class="d-flex align-items-center mb-4">
+                        <h2 class="theme-primary mb-0">Traditional Kurdish Recipes</h2>
+                        <span class="badge badge-primary ms-3">Authentic</span>
+                    </div>
+                    <div class="row g-4" id="recipeContainer">
+                        
+                        <div class="col-lg-6 recipe-card" data-category="Main" data-time="45">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="position-relative">
+                                    <img src="./assets/images/kurd_29.jpg" class="card-img-top" alt="Kofta" style="height: 250px; object-fit: cover;">
+                                    <span class="position-absolute top-0 end-0 category-badge">Main Dish</span>
+                                </div>
+                                <div class="card-body p-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <h3 class="card-title theme-secondary mb-0">Kofta</h3>
+                                        <span class="badge badge-accent">Popular</span>
+                                    </div>
+                                    <p class="card-text">Traditional Kurdish meatballs made with minced meat, herbs, and spices, often served with rice or bread.</p>
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <span class="text-muted"><i class="bi bi-clock"></i> 45 minutes</span>
+                                        <button class="btn btn-outline-theme-secondary" data-bs-toggle="collapse" data-bs-target="#koftaRecipe" aria-expanded="false">
+                                            <i class="bi bi-book"></i> View Recipe
+                                        </button>
+                                    </div>
+                                    <div class="collapse mt-3" id="koftaRecipe">
+                                        <div class="card card-body recipe-details">
+                                            <div class="recipe-section">
+                                                <h5><i class="bi bi-basket me-2"></i>Ingredients:</h5>
+                                                <ul class="ingredient-list">
+                                                    <li>1 kg ground lamb or beef</li>
+                                                    <li>1 large onion, finely chopped</li>
+                                                    <li>4 cloves garlic, minced</li>
+                                                    <li>1/2 cup fresh parsley, chopped</li>
+                                                    <li>2 tbsp fresh mint, chopped</li>
+                                                    <li>2 tbsp ground sumac</li>
+                                                    <li>1 tbsp ground cumin</li>
+                                                    <li>1 tsp ground cinnamon</li>
+                                                    <li>Salt and pepper to taste</li>
+                                                </ul>
+                                            </div>
+                                            <div class="recipe-section">
+                                                <h5><i class="bi bi-list-ol me-2"></i>Instructions:</h5>
+                                                <ol class="instruction-list">
+                                                    <li>In a large bowl, combine all ingredients and mix well.</li>
+                                                    <li>Refrigerate the mixture for at least 1 hour.</li>
+                                                    <li>Shape the mixture into oval patties.</li>
+                                                    <li>Grill, bake, or fry until cooked through.</li>
+                                                    <li>Serve hot with rice, salad, and fresh herbs.</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col-lg-6 recipe-card" data-category="Main" data-time="60">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="position-relative">
+                                    <img src="./assets/images/kurd_30.jpg" class="card-img-top" alt="Dolma" style="height: 250px; object-fit: cover;">
+                                    <span class="position-absolute top-0 end-0 category-badge">Main Dish</span>
+                                </div>
+                                <div class="card-body p-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <h3 class="card-title theme-secondary mb-0">Dolma</h3>
+                                        <span class="badge badge-accent">Traditional</span>
+                                    </div>
+                                    <p class="card-text">Stuffed vegetables (typically grape leaves, peppers, or zucchini) filled with a mixture of rice, minced meat, and aromatic herbs.</p>
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <span class="text-muted"><i class="bi bi-clock"></i> 1 hour</span>
+                                        <button class="btn btn-outline-theme-secondary" data-bs-toggle="collapse" data-bs-target="#dolmaRecipe" aria-expanded="false">
+                                            <i class="bi bi-book"></i> View Recipe
+                                        </button>
+                                    </div>
+                                    <div class="collapse mt-3" id="dolmaRecipe">
+                                        <div class="card card-body recipe-details">
+                                            <div class="recipe-section">
+                                                <h5><i class="bi bi-basket me-2"></i>Ingredients:</h5>
+                                                <ul class="ingredient-list">
+                                                    <li>1 jar of grape leaves (or fresh bell peppers)</li>
+                                                    <li>1 cup rice, rinsed and drained</li>
+                                                    <li>500g ground lamb or beef</li>
+                                                    <li>1 onion, finely chopped</li>
+                                                    <li>3 tbsp tomato paste</li>
+                                                    <li>1/4 cup fresh parsley, chopped</li>
+                                                    <li>1/4 cup fresh mint, chopped</li>
+                                                    <li>1/4 cup fresh dill, chopped</li>
+                                                    <li>2 tbsp olive oil</li>
+                                                    <li>2 tsp ground cumin</li>
+                                                    <li>Salt and pepper to taste</li>
+                                                </ul>
+                                            </div>
+                                            <div class="recipe-section">
+                                                <h5><i class="bi bi-list-ol me-2"></i>Instructions:</h5>
+                                                <ol class="instruction-list">
+                                                    <li>Mix rice, meat, onion, herbs, spices, and tomato paste.</li>
+                                                    <li>If using grape leaves, blanch them in hot water.</li>
+                                                    <li>Place a small amount of filling on each leaf/vegetable.</li>
+                                                    <li>Roll or stuff and arrange in a pot.</li>
+                                                    <li>Add water and olive oil, then simmer until tender.</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col-lg-6 recipe-card" data-category="Bread" data-time="30">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="position-relative">
+                                    <img src="./assets/images/kurd_32.jpg" class="card-img-top" alt="Naan Bread" style="height: 250px; object-fit: cover;">
+                                    <span class="position-absolute top-0 end-0 category-badge">Bread</span>
+                                </div>
+                                <div class="card-body p-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <h3 class="card-title theme-secondary mb-0">Naan Bread</h3>
+                                        <span class="badge badge-accent">Staple</span>
+                                    </div>
+                                    <p class="card-text">A traditional Kurdish flatbread that is typically baked in a tandoor (clay oven) and eaten with various dishes.</p>
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <span class="text-muted"><i class="bi bi-clock"></i> 30 minutes</span>
+                                        <button class="btn btn-outline-theme-secondary" data-bs-toggle="collapse" data-bs-target="#naanRecipe" aria-expanded="false">
+                                            <i class="bi bi-book"></i> View Recipe
+                                        </button>
+                                    </div>
+                                    <div class="collapse mt-3" id="naanRecipe">
+                                        <div class="card card-body recipe-details">
+                                            <div class="recipe-section">
+                                                <h5><i class="bi bi-basket me-2"></i>Ingredients:</h5>
+                                                <ul class="ingredient-list">
+                                                    <li>3 cups all-purpose flour</li>
+                                                    <li>1 tsp salt</li>
+                                                    <li>1 tsp baking powder</li>
+                                                    <li>1 tbsp sugar</li>
+                                                    <li>2 tsp active dry yeast</li>
+                                                    <li>1/4 cup warm water</li>
+                                                    <li>3/4 cup warm milk</li>
+                                                    <li>2 tbsp vegetable oil</li>
+                                                    <li>1 egg, beaten</li>
+                                                    <li>Sesame or nigella seeds (optional)</li>
+                                                </ul>
+                                            </div>
+                                            <div class="recipe-section">
+                                                <h5><i class="bi bi-list-ol me-2"></i>Instructions:</h5>
+                                                <ol class="instruction-list">
+                                                    <li>Dissolve yeast in warm water with sugar.</li>
+                                                    <li>Mix dry ingredients, then add yeast mixture, milk, oil, and egg.</li>
+                                                    <li>Knead until smooth and elastic, then let rise until doubled.</li>
+                                                    <li>Divide into portions, shape into flat rounds.</li>
+                                                    <li>Bake in a hot oven or on a preheated pan until golden.</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col-lg-6 recipe-card" data-category="Dessert" data-time="60">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="position-relative">
+                                    <img src="./assets/images/kurd_31.jpg" class="card-img-top" alt="Baklava" style="height: 250px; object-fit: cover;">
+                                    <span class="position-absolute top-0 end-0 category-badge">Dessert</span>
+                                </div>
+                                <div class="card-body p-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <h3 class="card-title theme-secondary mb-0">Baklava</h3>
+                                        <span class="badge badge-accent">Sweet</span>
+                                    </div>
+                                    <p class="card-text">Sweet pastry made of layers of filo dough filled with chopped nuts and sweetened with honey or syrup, popular throughout Kurdistan.</p>
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <span class="text-muted"><i class="bi bi-clock"></i> 1 hour</span>
+                                        <button class="btn btn-outline-theme-secondary" data-bs-toggle="collapse" data-bs-target="#baklavaRecipe" aria-expanded="false">
+                                            <i class="bi bi-book"></i> View Recipe
+                                        </button>
+                                    </div>
+                                    <div class="collapse mt-3" id="baklavaRecipe">
+                                        <div class="card card-body recipe-details">
+                                            <div class="recipe-section">
+                                                <h5><i class="bi bi-basket me-2"></i>Ingredients:</h5>
+                                                <ul class="ingredient-list">
+                                                    <li>1 package filo dough</li>
+                                                    <li>2 cups chopped walnuts or pistachios</li>
+                                                    <li>1 tsp ground cinnamon</li>
+                                                    <li>1 cup melted butter</li>
+                                                    <li>1 cup sugar</li>
+                                                    <li>1 cup water</li>
+                                                    <li>1/2 cup honey</li>
+                                                    <li>1 tsp lemon juice</li>
+                                                    <li>1 tsp rose water (optional)</li>
+                                                </ul>
+                                            </div>
+                                            <div class="recipe-section">
+                                                <h5><i class="bi bi-list-ol me-2"></i>Instructions:</h5>
+                                                <ol class="instruction-list">
+                                                    <li>Mix nuts and cinnamon.</li>
+                                                    <li>Layer several sheets of filo, brushing each with butter.</li>
+                                                    <li>Sprinkle nut mixture, then add more layers of filo.</li>
+                                                    <li>Cut into diamond shapes and bake until golden.</li>
+                                                    <li>Make syrup by boiling sugar, water, honey, and flavorings.</li>
+                                                    <li>Pour cooled syrup over hot baklava and let soak.</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col-lg-6 recipe-card" data-category="Appetizer" data-time="30">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="position-relative">
+                                    <img src="./assets/images/kurd_02.webp" class="card-img-top" alt="Hummus" style="height: 250px; object-fit: cover;">
+                                    <span class="position-absolute top-0 end-0 category-badge">Appetizer</span>
+                                </div>
+                                <div class="card-body p-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <h3 class="card-title theme-secondary mb-0">Hummus</h3>
+                                        <span class="badge badge-accent">Dip</span>
+                                    </div>
+                                    <p class="card-text">A creamy dip made from chickpeas, tahini, olive oil, lemon, and garlic, typically served with bread as an appetizer.</p>
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <span class="text-muted"><i class="bi bi-clock"></i> 30 minutes</span>
+                                        <button class="btn btn-outline-theme-secondary" data-bs-toggle="collapse" data-bs-target="#hummusRecipe" aria-expanded="false">
+                                            <i class="bi bi-book"></i> View Recipe
+                                        </button>
+                                    </div>
+                                    <div class="collapse mt-3" id="hummusRecipe">
+                                        <div class="card card-body recipe-details">
+                                            <div class="recipe-section">
+                                                <h5><i class="bi bi-basket me-2"></i>Ingredients:</h5>
+                                                <ul class="ingredient-list">
+                                                    <li>2 cups cooked chickpeas</li>
+                                                    <li>1/4 cup tahini</li>
+                                                    <li>3 tbsp olive oil, plus more for serving</li>
+                                                    <li>Juice of 1 lemon</li>
+                                                    <li>2 cloves garlic, minced</li>
+                                                    <li>1/2 tsp cumin</li>
+                                                    <li>Salt to taste</li>
+                                                    <li>2-3 tbsp water (as needed)</li>
+                                                    <li>Paprika and chopped parsley for garnish</li>
+                                                </ul>
+                                            </div>
+                                            <div class="recipe-section">
+                                                <h5><i class="bi bi-list-ol me-2"></i>Instructions:</h5>
+                                                <ol class="instruction-list">
+                                                    <li>Blend chickpeas, tahini, olive oil, lemon juice, and garlic.</li>
+                                                    <li>Add water as needed to achieve desired consistency.</li>
+                                                    <li>Season with salt and cumin.</li>
+                                                    <li>Transfer to a serving dish and create a well in the center.</li>
+                                                    <li>Drizzle with olive oil and sprinkle with paprika and parsley.</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col-lg-6 recipe-card" data-category="Beverage" data-time="30">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="position-relative">
+                                    <img src="./assets/images/kurd_33.jpg" class="card-img-top" alt="Kurdish Tea" style="height: 250px; object-fit: cover;">
+                                    <span class="position-absolute top-0 end-0 category-badge">Beverage</span>
+                                </div>
+                                <div class="card-body p-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <h3 class="card-title theme-secondary mb-0">Kurdish Tea (Chai)</h3>
+                                        <span class="badge badge-accent">Essential</span>
+                                    </div>
+                                    <p class="card-text">Strong black tea often served in small glasses with sugar, an essential element of Kurdish hospitality and social gatherings.</p>
+                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                        <span class="text-muted"><i class="bi bi-clock"></i> 30 minutes</span>
+                                        <button class="btn btn-outline-theme-secondary" data-bs-toggle="collapse" data-bs-target="#teaRecipe" aria-expanded="false">
+                                            <i class="bi bi-book"></i> View Recipe
+                                        </button>
+                                    </div>
+                                    <div class="collapse mt-3" id="teaRecipe">
+                                        <div class="card card-body recipe-details">
+                                            <div class="recipe-section">
+                                                <h5><i class="bi bi-basket me-2"></i>Ingredients:</h5>
+                                                <ul class="ingredient-list">
+                                                    <li>4 tbsp loose black tea leaves</li>
+                                                    <li>4 cups water</li>
+                                                    <li>Sugar to taste</li>
+                                                    <li>Cardamom pods or cinnamon stick (optional)</li>
+                                                </ul>
+                                            </div>
+                                            <div class="recipe-section">
+                                                <h5><i class="bi bi-list-ol me-2"></i>Instructions:</h5>
+                                                <ol class="instruction-list">
+                                                    <li>Bring water to a boil in a teapot.</li>
+                                                    <li>Add tea leaves and optional spices.</li>
+                                                    <li>Simmer on low heat for 10-15 minutes.</li>
+                                                    <li>Strain and serve in small glasses.</li>
+                                                    <li>Add sugar to taste (traditionally quite sweet).</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-4">
+                        <nav aria-label="Recipe pagination">
+                            <ul class="pagination">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                                </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">Next</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    
+    <footer>
+        <svg class="footer-wave" viewBox="0 0 1440 320" preserveAspectRatio="none" style="filter: none; box-shadow: none;">
+            <path fill="#00855D" fill-opacity="1" d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,90.7C672,85,768,107,864,133.3C960,160,1056,192,1152,186.7C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+        <div class="footer-content">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-4 col-lg-3 col-xl-3">
+                        <h5>Kurdistan Cultural Heritage</h5>
+                        <p>Celebrating and preserving the rich cultural heritage of Kurdistan.</p>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3">
+                        <h5>Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="history.html">History</a></li>
+                            <li><a href="music.html">Music</a></li>
+                            <li><a href="crafts.html">Crafts</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3">
+                        <h5>More</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="language.html">Language</a></li>
+                            <li><a href="recipes.html">Recipes</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <p class="copyright-text text-center">© 2025 Kurdistan Cultural Heritage. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    
+    <button type="button" class="btn-back-to-top" id="backToTop">
+        <i class="bi bi-arrow-up-short"></i>
+    </button>
+
+    
+    <script src="scripts/bootstrap/bootstrap.bundle.min.js"></script>
+    
+    <script src="scripts/aos/aos.js"></script>
+    
+    <script src="scripts/main.js"></script>
+    <script src="scripts/animations.js"></script>
+    
+    <script src="scripts/recipe.js"></script>
+    
+    <script src="scripts/animated-dots.js"></script>
+
+
+</body></html>

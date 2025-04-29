@@ -1,0 +1,742 @@
+<!DOCTYPE html><html lang="en" data-bs-theme="light"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore traditional Kurdish music, instruments, and famous artists">
+    <meta name="keywords" content="Kurdistan, Kurdish music, traditional instruments, famous Kurdish artists">
+    <title>Music - Kurdistan Cultural Heritage</title>
+    
+    <link rel="icon" href="assets/icons/icon.png" type="image/png">
+    
+    <link href="./styles/bootstrap/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./styles/bootstrap/bootstrap-icons.css">
+    
+    <link href="./styles/aos/aos.css" rel="stylesheet">
+    
+    <link href="./styles/google/font/Poppins.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/style.css">
+    
+    <link rel="stylesheet" href="styles/toggle.css">
+    
+    
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/icons/icon.png" alt="Kurdistan Heritage" height="60" class="me-2">Kurdistan Heritage
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="history.html">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="music.html">Music</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="crafts.html">Crafts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="language.html">Language</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="recipes.html">Recipes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-2">
+                        <div class="form-check form-switch" id="themeToggleWrapper">
+                            <input class="form-check-input" type="checkbox" id="themeToggle" role="switch">
+                            <label class="form-check-label" for="themeToggle">
+                                <i class="bi bi-sun-fill"></i>
+                                <i class="bi bi-moon-stars-fill"></i>
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+    <header class="container-fluid py-5 mb-5 page-header">
+        <div class="container text-center">
+            <h1 class="display-3 fw-bold" style="color: #000 !important;">Kurdish Music</h1>
+            <p class="lead fs-4 mb-4" style="color: #000 !important;">Discover the rich musical traditions of Kurdistan</p>
+        </div>
+    </header>
+
+    
+    <div class="container mb-4">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Music</li>
+            </ol>
+        </nav>
+    </div>
+
+    
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="musicToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header bg-theme-secondary text-white">
+                <i class="bi bi-music-note-beamed me-2"></i>
+                <strong class="me-auto">Featured Kurdish Artist</strong>
+                <small>Just now</small>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                <div class="d-flex align-items-center">
+                    <img src="./assets/images/220px-Shahram_Nazeri.jpg" alt="Kurdish Artist" class="rounded me-2" width="50">
+                    <div>
+                        <strong>Shahram Nazeri</strong><br>
+                        Known as the "Nightingale of Iran" and master of Kurdish classical music.
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="audioToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header bg-theme-primary text-white">
+                <i class="bi bi-soundwave me-2"></i>
+                <strong class="me-auto">Now Playing</strong>
+                <small>Just now</small>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                You're listening to a traditional Kurdish instrument sample.
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="modal fade" id="musicHistoryModal" tabindex="-1" aria-labelledby="musicHistoryModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header bg-theme-primary text-white">
+                    <h5 class="modal-title" id="musicHistoryModalLabel">History of Kurdish Music</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-badge bg-theme-primary"><i class="bi bi-music-note"></i></div>
+                            <div class="timeline-content">
+                                <h4 class="timeline-title">Ancient Origins</h4>
+                                <p>Kurdish music's roots stretch back thousands of years, reflecting influences from ancient Mesopotamian and Persian cultures.</p>
+                                <span class="badge bg-secondary">3000+ BCE</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-badge bg-theme-secondary"><i class="bi bi-music-note-beamed"></i></div>
+                            <div class="timeline-content">
+                                <h4 class="timeline-title">Medieval Period</h4>
+                                <p>Development of distinctive Kurdish melodic patterns and instruments like the tembûr gained prominence during this era.</p>
+                                <span class="badge bg-secondary">500-1500 CE</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-badge bg-warning"><i class="bi bi-people"></i></div>
+                            <div class="timeline-content">
+                                <h4 class="timeline-title">Ottoman Era</h4>
+                                <p>Kurdish music flourished in regional courts while maintaining distinct cultural identity through folk traditions.</p>
+                                <span class="badge bg-secondary">1500-1900s</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-badge bg-theme-primary"><i class="bi bi-broadcast"></i></div>
+                            <div class="timeline-content">
+                                <h4 class="timeline-title">Modern Era</h4>
+                                <p>Kurdish music entered radio broadcasts and recordings, preserving traditional sounds while adapting to new technologies.</p>
+                                <span class="badge bg-secondary">1900-1980s</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-badge bg-theme-secondary"><i class="bi bi-globe"></i></div>
+                            <div class="timeline-content">
+                                <h4 class="timeline-title">Contemporary Period</h4>
+                                <p>Kurdish artists embrace global influences while keeping traditional elements alive, reaching international audiences.</p>
+                                <span class="badge bg-secondary">1980s-Present</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-theme-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="musicGlossary" aria-labelledby="musicGlossaryLabel">
+        <div class="offcanvas-header bg-theme-secondary text-white">
+            <h5 class="offcanvas-title" id="musicGlossaryLabel">Kurdish Music Glossary</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="list-group list-group-flush">
+                <div class="list-group-item">
+                    <h5>Lawik</h5>
+                    <p>A Kurdish vocal genre that often narrates heroic tales or expresses deep emotions.</p>
+                </div>
+                <div class="list-group-item">
+                    <h5>Stran</h5>
+                    <p>A general term for Kurdish songs, often performed at celebrations and gatherings.</p>
+                </div>
+                <div class="list-group-item">
+                    <h5>Govend</h5>
+                    <p>Traditional Kurdish circle dances performed to specific rhythmic patterns.</p>
+                </div>
+                <div class="list-group-item">
+                    <h5>Dengbêj</h5>
+                    <p>Traditional Kurdish bards who recite stories, often without instrumental accompaniment.</p>
+                </div>
+                <div class="list-group-item">
+                    <h5>Hayran</h5>
+                    <p>A lyrical and emotional style focusing on love, longing, and connection.</p>
+                </div>
+                <div class="list-group-item">
+                    <h5>Maqam</h5>
+                    <p>A system of melodic modes used in traditional Middle Eastern music, including Kurdish traditions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="container my-5">
+        <div class="row">
+            
+            <div class="col-lg-3 d-none d-lg-block">
+                <nav id="music-nav" class="scrollspy-nav">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#introduction">Introduction</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#instruments">Traditional Instruments</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#traditions">Musical Traditions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#modern">Modern Kurdish Music</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#poetry">Poetry in Music</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            
+            <div class="col-lg-9" data-bs-spy="scroll" data-bs-target="#music-nav" data-bs-smooth-scroll="true" tabindex="0">
+                
+                <section id="introduction" class="mb-5">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-4">
+                                        <h2 class="card-title theme-primary mb-0">The Soul of Kurdistan</h2>
+                                        <span class="badge badge-primary ms-3">Cultural Heritage</span>
+                                    </div>
+                                    <p class="card-text">Kurdish music has a rich and diverse history spanning thousands of years. It reflects the joys, struggles, and deeply held values of the Kurdish people. From lively wedding songs to haunting ballads, Kurdish music embodies the spirit of a resilient culture.</p>
+                                    <p class="card-text">Traditional Kurdish music features instruments such as the tembûr (long-necked lute), bilûr (flute), and def (frame drum). Contemporary Kurdish artists often blend these traditional elements with modern musical styles, creating a vibrant musical landscape.</p>
+                                    
+                                    <div class="alert alert-theme-primary d-flex align-items-center mt-4" role="alert">
+                                        <i class="bi bi-music-note-beamed fs-4 me-2"></i>
+                                        <div>
+                                            Use the navigation on the left to explore different aspects of Kurdish musical traditions.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                
+                <section id="instruments" class="mb-5">
+        <h2 class="text-center mb-4 theme-primary">Traditional Instruments</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                            <div class="card h-100 border-0 shadow-sm instrument-card" data-bs-toggle="tooltip" data-bs-placement="top" title="Click for more information">
+                                <div class="position-relative">
+                    <img src="./assets/images/kurd_18.jpg" class="card-img-top" alt="Tembûr" style="height: 250px; object-fit: cover;">
+                                    <span class="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-theme-secondary">
+                                        Iconic
+                                        <span class="visually-hidden">importance level</span>
+                                    </span>
+                                </div>
+                    <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <h3 class="card-title theme-secondary mb-0">Tembûr</h3>
+                                        <span class="badge theme-accent">Iconic</span>
+                                    </div>
+                        <p class="card-text">The tembûr is a long-necked string instrument fundamental to Kurdish folk music. It typically has three strings and is used to create both melodic and rhythmic foundations for songs.</p>
+                        <div class="mt-3">
+                                        <h6 class="mb-2">Cultural Importance</h6>
+                                        <audio controls="" class="w-100" onplay="showAudioToast('Tembûr')">
+                                <source src="./assets/audio/long-necked-lute.ogg" type="audio/ogg">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <div class="text-center mt-2">
+                                <small class="text-muted">Tembûr solo performance sample</small>
+                            </div>
+                        </div>
+                                    <button class="btn btn-sm btn-outline-theme-primary mt-3 w-100" data-bs-toggle="modal" data-bs-target="#temburModal">
+                                        Learn More <i class="bi bi-arrow-right"></i>
+                                    </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="./assets/images/kurd_19.jpg" class="card-img-top" alt="Bilûr" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <h3 class="card-title theme-secondary mb-0">Bilûr</h3>
+                                        <span class="badge theme-secondary">Traditional</span>
+                                    </div>
+                        <p class="card-text">The bilûr is a side-blown flute made from reed or wood. Its haunting sound is often associated with pastoral life and is commonly used to express emotions in Kurdish folk music.</p>
+                        <div class="mt-3">
+                                        <h6 class="mb-2">Cultural Importance</h6>
+                            <audio controls="" class="w-100">
+                                <source src="./assets/audio/ney-flute.ogg" type="audio/ogg">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <div class="text-center mt-2">
+                                <small class="text-muted">Similar flute performance sample</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="./assets/images/kurd_07.jpg" class="card-img-top" alt="Def" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <h3 class="card-title theme-secondary mb-0">Def</h3>
+                                        <span class="badge theme-primary">Ceremonial</span>
+                                    </div>
+                        <p class="card-text">The def is a large frame drum with metal rings attached to its interior that jingle when the drum is played. It's central to Kurdish rhythmic patterns and is used in celebrations and ceremonies.</p>
+                        <div class="mt-3">
+                                        <h6 class="mb-2">Cultural Importance</h6>
+                            <audio controls="" class="w-100">
+                                <source src="./assets/audio/frame-drum.ogg" type="audio/ogg">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <div class="text-center mt-2">
+                                <small class="text-muted">Frame drum performance sample</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                </section>
+
+    
+                <section id="traditions" class="mb-5">
+        <h2 class="text-center mb-4 theme-primary">Musical Traditions</h2>
+        <div class="row">
+                        <div class="col-md-5">
+                            <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action active" aria-current="true" data-bs-toggle="collapse" data-bs-target="#lawikDesc" aria-expanded="true">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h5 class="mb-1">Lawik &amp; Stran</h5>
+                                        <small><i class="bi bi-music-note"></i> Vocal</small>
+                                    </div>
+                                    <p class="mb-1">Traditional vocal genres for storytelling and celebration</p>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action" data-bs-toggle="collapse" data-bs-target="#govendDesc" aria-expanded="false">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h5 class="mb-1">Govend (Dance Music)</h5>
+                                        <small><i class="bi bi-people"></i> Ceremonial</small>
+                                    </div>
+                                    <p class="mb-1">Circle dance traditions central to Kurdish celebrations</p>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action" data-bs-toggle="collapse" data-bs-target="#hayranDesc" aria-expanded="false">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h5 class="mb-1">Hayran</h5>
+                                        <small><i class="bi bi-heart"></i> Poetic</small>
+                                    </div>
+                                    <p class="mb-1">Love songs and poetic expressions of emotion</p>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action" data-bs-toggle="collapse" data-bs-target="#chianDesc" aria-expanded="false">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h5 class="mb-1">Chian</h5>
+                                        <small><i class="bi bi-geo-alt"></i> Regional</small>
+                                    </div>
+                                    <p class="mb-1">Mountain songs celebrating nature and heritage</p>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-7">
+                            <div class="collapse show" id="lawikDesc">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h3 class="card-title theme-secondary">Lawik &amp; Stran</h3>
+                        <p class="card-text">Lawik is a vocal genre that often tells heroic stories or expresses emotions like love and longing. Stran refers to songs that are often performed at celebrations and gatherings.</p>
+                        <div class="mt-3">
+                            <img src="./assets/images/kurd_18.jpg" class="img-fluid rounded" alt="Kurdish Singer with Tembûr" style="width: 100%; height: auto;">
+                            <div class="text-center mt-2">
+                                <small class="text-muted">Kurdish musician performing traditional Lawik songs</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                            <div class="collapse" id="govendDesc">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h3 class="card-title theme-secondary">Govend (Dance Music)</h3>
+                        <p class="card-text">Govend refers to Kurdish circle dances performed at celebrations. The music for these dances is characterized by energetic rhythms and is a central part of Kurdish cultural gatherings.</p>
+                        <div class="mt-3">
+                            <img src="./assets/images/kurd_20.jpg" class="img-fluid rounded" alt="Def" style="width: 100%; height: auto;">
+                            <div class="text-center mt-2">
+                                <small class="text-muted">Def drum used in traditional Kurdish dance music</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                            <div class="collapse" id="hayranDesc">
+                                <div class="card h-100 border-0 shadow-sm">
+                                    <div class="card-body">
+                                        <h3 class="card-title theme-secondary">Hayran</h3>
+                                        <p class="card-text">Hayran is a lyrical and emotional style of Kurdish music, often featuring long, expressive vocal passages. These songs typically explore themes of love, longing, and emotional connection.</p>
+                                        <div class="mt-3">
+                                            <img src="./assets/images/kurd_20.jpg" class="img-fluid rounded" alt="Tembûr" style="width: 100%; height: auto;">
+                                            <div class="text-center mt-2">
+                                                <small class="text-muted">Tembûr accompaniment is common in Hayran performances</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="collapse" id="chianDesc">
+                                <div class="card h-100 border-0 shadow-sm">
+                                    <div class="card-body">
+                                        <h3 class="card-title theme-secondary">Chian</h3>
+                                        <p class="card-text">Chian songs celebrate the Kurdistan mountains and the connection between Kurdish people and their natural environment. These songs often express cultural pride and connection to the homeland.</p>
+                                        <div class="mt-3">
+                                            <img src="./assets/images/kurd_18.jpg" class="img-fluid rounded" alt="Bilûr" style="width: 100%; height: auto;">
+                                            <div class="text-center mt-2">
+                                                <small class="text-muted">Bilûr flute is often used in mountain songs of Kurdistan</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        </div>
+    </div>
+                </section>
+
+    
+                <section id="modern" class="mb-5">
+        <h2 class="text-center mb-4 theme-primary">Modern Kurdish Music</h2>
+        <div class="row">
+                        <div class="col-12">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <p class="card-text">Contemporary Kurdish music often blends traditional elements with modern styles like pop, rock, and electronic music. Today's Kurdish artists continue to use music as a means of cultural expression while exploring new musical territories.</p>
+                                    
+                                    <div id="modernMusicCarousel" class="carousel slide mt-4" data-bs-ride="carousel">
+                                        <div class="carousel-indicators">
+                                            <button type="button" data-bs-target="#modernMusicCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                            <button type="button" data-bs-target="#modernMusicCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                            <button type="button" data-bs-target="#modernMusicCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        </div>
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <div class="ratio ratio-16x9">
+                                                    <img src="./assets/images/kurd_20.jpg" class="d-block w-100" alt="Tembûr" style="object-fit: cover;">
+                                                </div>
+                                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                                                    <h5>Musical Fusion</h5>
+                                                    <p>Experimentation with diverse global influences</p>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="ratio ratio-16x9">
+                                                    <img src="./assets/images/kurd_22.jpg" class="d-block w-100" alt="Bilûr" style="object-fit: cover;">
+                                                </div>
+                                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                                                    <h5>Kurdish Pop Music</h5>
+                                                    <p>Popular contemporary artists reaching global audiences</p>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="ratio ratio-16x9">
+                                                    <img src="./assets/images/kurd_21.jpg" class="d-block w-100" alt="Def" style="object-fit: cover;">
+                                                </div>
+                                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                                                    <h5>Contemporary Kurdish Artists</h5>
+                                                    <p>Blending traditional sounds with modern production</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#modernMusicCarousel" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#modernMusicCarousel" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                    
+                                    <div class="alert alert-theme-primary mt-4" role="alert">
+                            <i class="bi bi-info-circle-fill me-2"></i> Kurdish music continues to evolve while maintaining its cultural roots, serving as a vital expression of Kurdish identity.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                </section>
+
+    
+                <section id="poetry" class="mb-5">
+        <h2 class="text-center mb-4 theme-primary">Poetry in Kurdish Music</h2>
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body text-center">
+                        <h3 class="card-title theme-secondary mb-4">Traditional Kurdish Verse</h3>
+                        <div class="poem-container p-4 rounded">
+                            <p class="poem-text">
+                                In fields of green where flowers grow,<br>
+                                My thoughts turn homeward with a sigh.<br>
+                                The shepherd's flute plays melodies,<br>
+                                Our culture strong, we persevere.
+                            </p>
+                        </div>
+                        <div class="mt-4">
+                                        <div class="accordion" id="poetryAccordion">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header">
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePoetry" aria-expanded="true" aria-controls="collapsePoetry">
+                                                        Poetic Significance in Music
+                                                    </button>
+                                                </h2>
+                                                <div id="collapsePoetry" class="accordion-collapse collapse show" data-bs-parent="#poetryAccordion">
+                                                    <div class="accordion-body">
+                                                        <p>Poetry has always been integral to Kurdish musical traditions, expressing themes of homeland, nature, and cultural resilience.</p>
+                                                        <p>Many Kurdish songs feature poetic verses that celebrate the natural beauty of Kurdistan and convey deep emotional connections to the land.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="modal fade" id="temburModal" tabindex="-1" aria-labelledby="temburModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-theme-secondary text-white">
+                    <h5 class="modal-title" id="temburModalLabel">Tembûr - Kurdish String Instrument</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center mb-3">
+                        <img src="./assets/images/kurd_20.jpg" class="img-fluid rounded" alt="Tembûr" style="max-height: 200px;">
+                    </div>
+                    <h5>Construction</h5>
+                    <p>The tembûr typically has a pear-shaped body carved from a single piece of mulberry wood. Its long neck contains movable frets tied with gut strings. The instrument usually has three strings tuned in fourths or fifths.</p>
+                    
+                    <h5>Playing Technique</h5>
+                    <p>The tembûr is played with a plectrum, generating both melody and rhythmic accompaniment. Advanced players develop techniques to produce drone effects and complex melodic patterns.</p>
+                    
+                    <h5>Cultural Significance</h5>
+                    <p>The tembûr is closely associated with spiritual and religious music among the Kurdish people, particularly in rituals of the Ahl-e Haqq faith tradition. It's considered one of the most important instruments in Kurdish musical heritage.</p>
+                    
+                    <div class="alert alert-theme-primary mt-3">
+                        <i class="bi bi-info-circle-fill me-2"></i> The tembûr's distinctive sound can be heard in both traditional Kurdish folk music and modern fusion compositions.
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-theme-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <footer>
+        <svg class="footer-wave" viewBox="0 0 1440 320" preserveAspectRatio="none" style="filter: none; box-shadow: none;">
+            <path fill="#00855D" fill-opacity="1" d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,90.7C672,85,768,107,864,133.3C960,160,1056,192,1152,186.7C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+        <div class="footer-content">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-4 col-lg-3 col-xl-3">
+                        <h5>Kurdistan Cultural Heritage</h5>
+                        <p>Celebrating and preserving the rich cultural heritage of Kurdistan.</p>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3">
+                        <h5>Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="history.html">History</a></li>
+                            <li><a href="music.html">Music</a></li>
+                            <li><a href="crafts.html">Crafts</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3">
+                        <h5>More</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="language.html">Language</a></li>
+                            <li><a href="recipes.html">Recipes</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <p class="copyright-text text-center">© 2025 Kurdistan Cultural Heritage. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    
+    <button type="button" class="btn-back-to-top" id="backToTop">
+        <i class="bi bi-arrow-up-short"></i>
+    </button>
+
+    
+    <script src="scripts/bootstrap/bootstrap.bundle.min.js"></script>
+    
+    <script src="scripts/aos/aos.js"></script>
+    
+    <script src="scripts/main.js"></script>
+    <script>
+        // Initialize tooltips
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+        
+        // Show audio toast
+        function showAudioToast(instrument) {
+            const audioToast = document.getElementById('audioToast');
+            const toastBody = audioToast.querySelector('.toast-body');
+            toastBody.textContent = `You're listening to a ${instrument} music sample.`;
+            const toast = new bootstrap.Toast(audioToast);
+            toast.show();
+        }
+        
+        // Show featured artist toast
+        document.getElementById('showMusicToast').addEventListener('click', function() {
+            const toast = new bootstrap.Toast(document.getElementById('musicToast'));
+            toast.show();
+        });
+        
+        // Add timeline styles
+        document.addEventListener('DOMContentLoaded', function() {
+            const style = document.createElement('style');
+            style.innerHTML = `
+                .timeline {
+                    position: relative;
+                    padding: 20px 0;
+                }
+                .timeline:before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 20px;
+                    height: 100%;
+                    width: 4px;
+                    background: #e9ecef;
+                }
+                .timeline-item {
+                    position: relative;
+                    margin-bottom: 30px;
+                    padding-left: 60px;
+                }
+                .timeline-badge {
+                    position: absolute;
+                    left: 0;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    text-align: center;
+                    line-height: 40px;
+                    color: white;
+                    z-index: 1;
+                }
+                .timeline-badge i {
+                    font-size: 1.2rem;
+                }
+                .timeline-content {
+                    padding: 15px;
+                    background: white;
+                    border-radius: 5px;
+                    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+                }
+                .instrument-card {
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                }
+                .instrument-card:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+                }
+                .alert-theme-primary {
+                    background-color: rgba(0, 133, 93, 0.1);
+                    color: #00855D;
+                    border-color: rgba(0, 133, 93, 0.2);
+                }
+                .btn-outline-theme-primary {
+                    color: #00855D;
+                    border-color: #00855D;
+                }
+                .btn-outline-theme-primary:hover {
+                    color: #fff;
+                    background-color: #00855D;
+                    border-color: #00855D;
+                }
+                .btn-outline-theme-secondary {
+                    color: #E21833;
+                    border-color: #E21833;
+                }
+                .btn-outline-theme-secondary:hover {
+                    color: #fff;
+                    background-color: #E21833;
+                    border-color: #E21833;
+                }
+                .bg-theme-primary {
+                    background-color: #00855D !important;
+                }
+                .bg-theme-secondary {
+                    background-color: #E21833 !important;
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
+    
+    <script src="scripts/animated-dots.js"></script>
+
+ 
+</body></html>

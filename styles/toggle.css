@@ -1,0 +1,105 @@
+#themeToggleWrapper {
+    position: relative;
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+}
+
+#themeToggle {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+#themeToggle + .form-check-label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 56px;
+    height: 28px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 100px;
+    padding: 0 5px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+}
+
+#themeToggle + .form-check-label i {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+    z-index: 1;
+    line-height: 26px;
+}
+
+#themeToggle + .form-check-label i.bi-sun-fill {
+    color: #FFD100;
+    display: inline-block;
+}
+
+#themeToggle + .form-check-label i.bi-moon-stars-fill {
+    color: #fff;
+    opacity: 0.8;
+    display: inline-block;
+}
+
+#themeToggle + .form-check-label::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    width: 22px;
+    height: 22px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+#themeToggle:checked + .form-check-label {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#themeToggle:checked + .form-check-label::after {
+    left: calc(100% - 26px);
+    background-color: var(--accent-color);
+}
+
+[data-bs-theme="dark"] #themeToggle + .form-check-label {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+[data-bs-theme="dark"] #themeToggle:checked + .form-check-label {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+[data-bs-theme="dark"] #themeToggle + .form-check-label i.bi-sun-fill {
+    color: #FFD100;
+}
+
+[data-bs-theme="dark"] #themeToggle + .form-check-label i.bi-moon-stars-fill {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Add responsive styles */
+@media (max-width: 991px) {
+    #themeToggleWrapper {
+        margin-left: 0;
+        display: flex !important;
+        visibility: visible !important;
+    }
+}
+
+@media (max-width: 576px) {
+    #themeToggleWrapper {
+        margin: 0.5rem 0;
+        display: flex !important;
+        visibility: visible !important;
+    }
+} 
